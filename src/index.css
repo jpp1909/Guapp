@@ -1,0 +1,447 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    width: 35%;
+    justify-self: center;
+}
+
+.noticias {
+    text-align: center;
+}
+
+#app {
+   
+    justify-self: center;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 0;
+  overflow: hidden;
+  color: white;
+  
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      var(--primary-color),
+      transparent
+    );
+  
+  }
+
+  .btn:hover {
+    background: transparent;
+    box-shadow: 0 0 20px 10px hsla(200, 14%, 91%, 0.5);
+
+}
+
+.form-input-material {
+  --input-default-border-color: white;
+  --input-border-bottom-color: white;
+  
+  input {
+    color: white!important;
+  }
+  input::placeholder {
+  color: white; /* O #FFFFFF */
+}
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  color: white;
+  background: rgba(112, 112, 112, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35);
+
+  h1 {
+    margin: 0 0 24px 0;
+  }
+
+  .form-input-material {
+    margin: 12px 0;
+    border-bottom: 1px solid white;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 18px 0 9px 0;
+    border-radius: 0;
+  }
+}
+
+.form-input-material .form-control-material {
+    padding: 1rem 0;
+    background: 0 0;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+}
+
+
+
+
+/**--- Noticias---------------**/
+
+
+/* Imagen en cada noticia */
+article img {
+  max-width: 100%;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+/* Contenedor principal tipo tarjeta */
+article {
+  max-width: 490px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 20px;
+  border-bottom: 1px solid #e6ecf0;
+  border-top: 1px solid #e6ecf0;
+  transition: box-shadow 0.3s ease;
+}
+
+article:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Header del artículo (title + body + time) */
+article .flex {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+article h3 {
+  font-weight: bold;
+  color: #0f1419;
+}
+
+article p {
+  font-size: 14px;
+  color: #657786;
+  margin-top: 5px;
+}
+
+/* Tiempo publicado */
+article .text-xs {
+  color: #657786 !important;
+  font-size: 12px;
+}
+
+/* Contador de likes y comentarios */
+article .mt-3 {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #657786;
+}
+
+article .mt-3 span {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+@media screen and (max-width:430px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  article .flex {
+    flex-direction: column;
+  }
+
+  article img {
+    margin-bottom: 20px;
+  }
+
+  article p {
+    margin-bottom: 15px;
+  }
+
+  article .mt-3 {
+    margin-left: 0;
+  }
+
+  article .mt-3 span {
+    margin-right: 10px;
+  }
+}
+
+
+/*boton chat*/
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom: 5.2%;
+    right: 35.5%;
+	background-color:#555555;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:17px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;    
+}
+
+
+
+/*header float*/
+
+
+/* HEADER FLOTANTE ABAJO */
+.container {
+  background: rgba(112, 112, 112, 0.8);
+  height: 50px;
+  width: 500px;
+  position: fixed;
+  bottom: 20px;       /* margen con el borde */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .5), -2px 2px 10px rgba(0, 0, 0, .3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 25px;
+  z-index: 100;
+}
+
+/* BOTONES AJUSTADOS */
+.btn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btn .content {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, .3);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  transition: transform 600ms;
+  transform-style: preserve-3d;
+  background: #fff;
+  perspective: 1000px;
+}
+
+/* FRONT */
+.btn .content .front {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(1rem);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.btn .content .front .border {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateZ(1rem);
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  backface-visibility: hidden;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
+}
+
+/* BACK */
+.btn .content .back {
+  width: 40px;
+  color: black;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(-1rem) rotateY(.5turn);
+  text-align: center;
+  font-family: sans-serif;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.btn .content .back p {
+  font-size: .6rem;
+  font-weight: 600;
+}
+.btn .content .back .border {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateZ(-.5rem);
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  backface-visibility: hidden;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
+}
+
+/* ICONOS MÁS PEQUEÑOS */
+.btn .front i {
+  font-size: 1rem;
+  text-shadow: 0 0 2px rgba(0, 0, 0, .3);
+}
+
+/* ANIMACIÓN REDUCIDA */
+.btn:hover .content {
+  transform: rotateY(.5turn) rotateX(-.02turn);
+}
+
+/* Colores por red social */
+.btn--1 i {
+  color: black;
+}
+.btn--2 i {
+  color: black;
+}
+.btn--3 i {
+  color: #24292e;
+}
+
+
+
+/*CHAT*/
+
+
+
+/* ===================== */
+/* CHAT INTERFACE ADAPTADA */
+/* ===================== */
+
+.chat-container {
+justify-content: end;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.4);
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Lista de mensajes */
+.chat-container ul.chat {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+/* Mensajes base */
+.chat-container .message {
+  padding-top: 15px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+/* Mensaje desde la compañía (izquierda) */
+.chat-container .message.left {
+  align-self: flex-start;
+  flex-direction: row;
+}
+
+/* Mensaje desde el usuario (derecha) */
+.chat-container .message.right {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+/* Avatar */
+.chat-container .message .logo {
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
+}
+
+/* Burbuja de chat */
+.chat-container .message p {
+  margin: 0;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0px 5px 8px rgba(0,0,0,0.3);
+}
+
+/* Burbuja izquierda (compañía) */
+.chat-container .message.left p {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+/* Burbuja derecha (usuario) */
+.chat-container .message.right p {
+  background: #0284c7; /* Tailwind sky-600 */
+  color: #fff;
+}
+
+/* Input de texto */
+.chat-container .text_input {
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 15px;
+  margin-top: 20px;
+  width: 100%;
+  outline: none;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .chat-container {
+    width: 100%;
+    border-radius: 0;
+  }
+}
